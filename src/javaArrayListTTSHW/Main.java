@@ -1,6 +1,7 @@
 package javaArrayListTTSHW;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -10,9 +11,6 @@ public class Main {
 		
 		Scanner userInput = new Scanner(System.in);
 		ArrayList<Integer> fiveNumbs = new ArrayList<Integer>();//create an ArrayList object
-		//fiveNumbs.add(16);
-		
-		//System.out.println(fiveNumbs);
 		
 		System.out.println("Please enter a number:");// begin request of numbers for ArrayList
 		String Num1 = userInput.nextLine();
@@ -40,20 +38,26 @@ public class Main {
 		fiveNumbs.add(Numb4);
 		fiveNumbs.add(Numb5);
 		
-		int sumFiveNumbs = 0;
+		int sumFiveNumbs = 0;// sum the numbers of the ArrayList
 		for (int i : fiveNumbs)
 			sumFiveNumbs += i;
 		
-		System.out.printf("The sum of the numbers is %s:\n", sumFiveNumbs);
+		System.out.printf("The sum of the numbers is %s\n", sumFiveNumbs);
 		
-		//sumFiveNumbs = (Numb1 + Numb2);
+		int productFiveNumbs = 1;// Multiply the numbers of the ArrayList
+		for (int i : fiveNumbs)
+			productFiveNumbs *= i;
 		
+		System.out.printf("The product of the numbers is %s\n", productFiveNumbs);
 		
-		//System.out.println(Numb1);
-		//System.out.println(Numb2);
-		//ArrayList<Integer> fiveNumbs = userInput.nextLine();
+		Integer maxFiveNumbs = Collections.max(fiveNumbs);// finds the largest number of the ArrayList
 		
+		System.out.printf("The largest of the numbers is %s\n", maxFiveNumbs);
+		
+		Integer minFiveNumbs = Collections.min(fiveNumbs);// finds the smallest number of the ArrayList
+		
+		System.out.printf("The smallest of the numbers is %s\n", minFiveNumbs);
 
 	}
 
-}
+	}
